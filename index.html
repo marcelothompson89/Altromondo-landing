@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altromondo - Soluciones Tecnológicas para un mundo que cambia</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo-altromondo.png" alt="Altromondo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#inicio" data-translate="nav-home">Inicio</a></li>
+                <li><a href="#nosotros" data-translate="nav-about">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="#servicios" data-translate="nav-services" class="dropbtn">
+                        Servicios <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="services/sap-btp.html">SAP Business Technology Platform</a>
+                        <a href="services/consultoria-sap.html">Consultoría SAP</a>
+                        <a href="services/apps-web-mobile.html">Apps Web & Mobile</a>
+                        <a href="services/automatizacion-ia.html">Automatización e IA</a>
+                        <a href="services/staffing.html">Staffing Especializado</a>
+                    </div>
+                </li>
+                <li><a href="#casos" data-translate="nav-cases">Casos</a></li>
+                <li><a href="#contacto" data-translate="nav-contact">Contacto</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('es')">ES</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <!-- Animated tech background elements -->
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        
+        <div class="hero-content">
+            <!-- Logo prominente en el hero -->
+            <div class="hero-logo">
+                <img src="images/logo-altromondo.png" alt="Altromondo">
+            </div>
+            
+            <h1 data-translate="hero-title">Soluciones Tecnológicas para un mundo que cambia</h1>
+            <p class="subtitle" data-translate="hero-subtitle">Impulsamos la eficiencia, innovación y escalabilidad con tecnologías SAP BTP, Fiori y desarrollos a medida.</p>
+            <a href="#contacto" class="cta-button pulse" data-translate="hero-cta">Hablemos de tu proyecto</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="section about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="about-title">Quiénes Somos</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3 data-translate="about-heading">Expertos apasionados por transformar negocios</h3>
+                    <p>Somos un equipo de especialistas con amplia experiencia en <span class="highlight">SAP BTP, Fiori, ECC y S/4 HANA</span>. Nos dedicamos a crear soluciones tecnológicas que impulsan la transformación digital de empresas líderes.</p>
+                    <p>Nuestra misión es simple: entregar <span class="highlight">cercanía, agilidad y resultados concretos</span> que generen un impacto real en el crecimiento de nuestros clientes.</p>
+                    <p>Cada proyecto es una oportunidad para demostrar nuestro compromiso con la excelencia técnica y la satisfacción del cliente.</p>
+                </div>
+                <div class="about-visual animate-on-scroll">
+                    <div class="about-image">
+                        <img src="images/logo-altromondo.png" alt="Altromondo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section section-watermark">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="services-title">Nuestros Servicios</h2>
+            <p class="section-subtitle animate-on-scroll" data-translate="services-subtitle">Soluciones integrales que potencian tu negocio</p>
+            
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🔧</div>
+                    <h3>Consultoría SAP</h3>
+                    <p>Consultoría funcional y técnica especializada en módulos SAP, optimización de procesos y migración a S/4 HANA.</p>
+                    <a href="services/consultoria-sap.html" class="service-link">Ver más detalles →</a>
+                </div>
+                
+                <div class="service-card animate-on-scroll clickable-card" onclick="window.location.href='services/sap-btp.html'">
+                    <div class="service-icon">📱</div>
+                    <h3>SAP Business Technology Platform (BTP)</h3>
+                    <p>Transformamos procesos empresariales mediante el desarrollo e integración de soluciones en SAP BTP.</p>
+                    <a href="services/sap-btp.html" class="service-link">Ver más detalles →</a>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🌐</div>
+                    <h3>Apps Web & Mobile</h3>
+                    <p>Desarrollo de aplicaciones web y móviles integradas con SAP, con UX/UI moderna y rendimiento optimizado.</p>
+                    <a href="services/apps-web-mobile.html" class="service-link">Ver más detalles →</a>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🤖</div>
+                    <h3>Automatización e IA</h3>
+                    <p>Implementación de soluciones de automatización e inteligencia artificial sobre ecosistema SAP.</p>
+                    <a href="services/automatizacion-ia.html" class="service-link">Ver más detalles →</a>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">👥</div>
+                    <h3>Staffing Especializado</h3>
+                    <p>Recursos humanos altamente capacitados en SAP para reforzar tu equipo en proyectos críticos.</p>
+                    <a href="services/staffing.html" class="service-link">Ver más detalles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="casos" class="section cases">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="cases-title">Casos de Éxito</h2>
+            <p class="section-subtitle animate-on-scroll" data-translate="cases-subtitle">Proyectos que transforman realidades empresariales</p>
+            
+            <div class="cases-grid">
+                <div class="case-card animate-on-scroll">
+                    <div class="case-image">🏢</div>
+                    <div class="case-content">
+                        <h3>Portal de Proveedores</h3>
+                        <p>Plataforma integral sobre SAP BTP integrada con S/4 HANA para gestión automatizada de proveedores y procesos de compras.</p>
+                    </div>
+                </div>
+                
+                <div class="case-card animate-on-scroll">
+                    <div class="case-image">📋</div>
+                    <div class="case-content">
+                        <h3>Gestión de Inventario</h3>
+                        <p>Aplicación móvil conectada con SAP ECC para control de inventario en tiempo real y optimización de stock.</p>
+                    </div>
+                </div>
+                
+                <div class="case-card animate-on-scroll">
+                    <div class="case-image">💼</div>
+                    <div class="case-content">
+                        <h3>Plataforma Comercial</h3>
+                        <p>Sistema de gestión comercial con dashboards ejecutivos y automatización de procesos de ventas.</p>
+                    </div>
+                </div>
+                
+                <div class="case-card animate-on-scroll">
+                    <div class="case-image">🌍</div>
+                    <div class="case-content">
+                        <h3>Gestión de Campo</h3>
+                        <p>Solución web y móvil para gestión de operaciones de campo con sincronización offline y reporting avanzado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="section clients">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="clients-title">Clientes que nos eligen</h2>
+            <div class="clients-carousel">
+                <!-- Con imágenes reales (recomendado) -->
+                <div class="client-logo">
+                    <img src="images/clients/mercedes.png" alt="Mercedes-Benz">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/bayer.png" alt="Bayer">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/pampaenergia.png" alt="Pampa Energía">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/fundacionfavaloro.png" alt="Fundación Favaloro">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/sacde.png" alt="SACDE">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/brightstar.png" alt="Brightstar">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/capgemini.png" alt="Capgemini">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/efalcom.png" alt="Efalcom">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/propato.png" alt="Propato">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/transba.png" alt="Transba">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/transener.png" alt="Transener">  
+                </div>  
+            </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="why-title">Por qué Altromondo</h2>
+            <div class="why-us-grid">
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">🎓</div>
+                    <h3>Experiencia Real en SAP</h3>
+                    <p>Más de 10 años desarrollando soluciones SAP para empresas líderes en Argentina y Latinoamérica.</p>
+                </div>
+                
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">⚡</div>
+                    <h3>Entrega Ágil de MVPs</h3>
+                    <p>Metodologías ágiles que garantizan entregas rápidas y iterativas para generar valor desde el día uno.</p>
+                </div>
+                
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">👥</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Cada cliente es único. Adaptamos nuestras soluciones a sus necesidades específicas y objetivos de negocio.</p>
+                </div>
+                
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">🔧</div>
+                    <h3>Equipo Técnico + Funcional</h3>
+                    <p>Combinamos expertise técnico profundo con sólido conocimiento funcional de procesos de negocio.</p>
+                </div>
+                
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">🎯</div>
+                    <h3>Compromiso con Resultados</h3>
+                    <p>No solo entregamos software, sino soluciones que generan ROI mensurable y transformación real.</p>
+                </div>
+                
+                <div class="why-item animate-on-scroll">
+                    <div class="why-icon">🚀</div>
+                    <h3>Innovación Constante</h3>
+                    <p>Siempre a la vanguardia de las últimas tecnologías SAP y tendencias del mercado enterprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;" data-translate="contact-title">Hablemos de tu proyecto</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);" data-translate="contact-subtitle">Te ayudamos a construir soluciones que funcionan, hoy y mañana.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h3>¡Empecemos juntos!</h3>
+                    <p>Cada gran proyecto comienza con una conversación. Contanos sobre tu desafío y diseñemos juntos la solución perfecta.</p>
+                    <br>
+                    <p><strong>📧 Email:</strong> info@altromondo.com.ar</p>
+                    <p><strong>📞 Teléfono:</strong> +54 11 1234-5678</p>
+                    <p><strong>📍 Ubicación:</strong> Buenos Aires, Argentina</p>
+                    <br>
+                </div>
+                
+                <form class="contact-form animate-on-scroll">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Contanos sobre tu proyecto</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Descripción del desafío, objetivos, timeline estimado..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/logo-altromondo.png" alt="Altromondo">
+            </div>
+            <div class="footer-tagline" data-translate="footer-tagline">Transformando negocios con tecnología SAP</div>
+            <p>&copy; 2025 Altromondo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
