@@ -147,13 +147,38 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Client carousel infinite scroll
-const carousel = document.querySelector('.clients-carousel');
-if (carousel) {
-    // Clone elements for seamless loop
-    const clients = carousel.innerHTML;
-    carousel.innerHTML = clients + clients;
-}
+// Función opcional para pausar/reanudar animación
+const initClientsCarousel = () => {
+    const carousel = document.querySelector('.clients-carousel');
+    const container = document.querySelector('.clients-carousel-container');
+    
+    if (carousel && container) {
+        // Pausar animación al hacer hover en cualquier logo
+        const logos = container.querySelectorAll('.client-logo');
+        
+        logos.forEach(logo => {
+            logo.addEventListener('mouseenter', () => {
+                carousel.style.animationPlayState = 'paused';
+            });
+            
+            logo.addEventListener('mouseleave', () => {
+                carousel.style.animationPlayState = 'running';
+            });
+        });
+        
+        // También pausar al hacer hover en el contenedor
+        container.addEventListener('mouseenter', () => {
+            carousel.style.animationPlayState = 'paused';
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            carousel.style.animationPlayState = 'running';
+        });
+    }
+};
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', initClientsCarousel);
 
 // Add hover effects to service cards
 document.querySelectorAll('.service-card').forEach(card => {

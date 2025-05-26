@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Header */
 .header {
     position: fixed;
@@ -185,7 +186,13 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #121272 0%, #111144 50%, #540ebb 100%);
+    background: 
+        linear-gradient(135deg, rgba(18, 18, 114, 0.8) 0%, rgba(17, 17, 68, 0.8) 50%, rgba(84, 14, 187, 0.8) 100%),
+        url('../images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     position: relative;
@@ -626,21 +633,61 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
 }
 
 .case-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .case-image {
     height: 200px;
-    background: linear-gradient(135deg, #1e3a8a, #06b6d4);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-image img {
+    transform: scale(1.05);
+}
+
+/* Fallback icons */
+.case-image:not(:has(img))::after,
+.case-image:has(img[style*="display: none"])::after {
     color: white;
     font-size: 3rem;
+    z-index: 2;
+}
+
+.case-card:nth-child(1) .case-image:not(:has(img))::after,
+.case-card:nth-child(1) .case-image:has(img[style*="display: none"])::after {
+    content: '🏢';
+}
+
+.case-card:nth-child(2) .case-image:not(:has(img))::after,
+.case-card:nth-child(2) .case-image:has(img[style*="display: none"])::after {
+    content: '📋';
+}
+
+.case-card:nth-child(3) .case-image:not(:has(img))::after,
+.case-card:nth-child(3) .case-image:has(img[style*="display: none"])::after {
+    content: '💼';
+}
+
+.case-card:nth-child(4) .case-image:not(:has(img))::after,
+.case-card:nth-child(4) .case-image:has(img[style*="display: none"])::after {
+    content: '🌍';
 }
 
 .case-content {
@@ -648,31 +695,79 @@ body {
 }
 
 .case-content h3 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
+    color: #121272;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .case-content p {
-    color: #64748b;
-    font-size: 0.9rem;
+    color: #111144;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.case-tag {
+    background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+    color: #006064;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 231, 231, 0.2);
+    transition: all 0.3s ease;
+}
+
+.case-tag:hover {
+    background: #00e7e7;
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* Clients */
 .clients {
     padding: 3rem 0;
+    overflow: hidden; /* Oculta el scroll horizontal */
+}
+
+.clients-carousel-container {
+    width: 100%;
+    overflow: hidden; /* Contenedor fijo */
+    position: relative;
+    mask: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    ); /* Efecto fade en los bordes */
 }
 
 .clients-carousel {
     display: flex;
     align-items: center;
     gap: 3rem;
-    overflow-x: auto;
-    padding: 2rem 0;
-    animation: scroll 20s linear infinite;
+    width: max-content; /* Ancho automático basado en contenido */
+    animation: scroll-infinite 30s linear infinite;
+}
+
+/* Duplicamos el contenido para loop infinito */
+.clients-carousel .client-set {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
 }
 
 .client-logo {
     min-width: 150px;
+    width: 150px; /* Ancho fijo */
     height: 80px;
     background: #f8fafc;
     border-radius: 10px;
@@ -683,6 +778,7 @@ body {
     color: #111144;
     transition: all 0.3s ease;
     padding: 1rem;
+    flex-shrink: 0; /* Previene que se compriman */
 }
 
 .client-logo img {
@@ -697,6 +793,7 @@ body {
     background: #00e7e7;
     color: #121272;
     transform: scale(1.05);
+    animation-play-state: paused; /* Pausa la animación en hover */
 }
 
 .client-logo:hover img {
@@ -875,6 +972,20 @@ body {
     100% { transform: translateX(-50%); }
 }
 
+@keyframes scroll-infinite {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); /* Se mueve exactamente la mitad */
+    }
+}
+
+/* Pausa la animación cuando se hace hover sobre el contenedor */
+.clients-carousel-container:hover .clients-carousel {
+    animation-play-state: paused;
+}
+
 /* Scroll animations */
 .animate-on-scroll {
     opacity: 0;
@@ -920,6 +1031,34 @@ body {
 
     .cases-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .case-image {
+        height: 180px;
+    }
+    
+    .case-content {
+        padding: 1.5rem;
+    }
+    
+    .case-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .clients-carousel {
+        gap: 2rem;
+        animation-duration: 20s; /* Más rápido en móvil */
+    }
+    
+    .client-set {
+        gap: 2rem;
+    }
+    
+    .client-logo {
+        min-width: 120px;
+        width: 120px;
+        height: 70px;
     }
 
     .why-us-grid {
@@ -946,4 +1085,22 @@ body {
     .dropdown.active .dropdown-content {
         display: block;
     }
+
+@media (max-width: 480px) {
+    .clients-carousel {
+        gap: 1.5rem;
+        animation-duration: 15s;
+    }
+    
+    .client-set {
+        gap: 1.5rem;
+    }
+    
+    .client-logo {
+        min-width: 100px;
+        width: 100px;
+        height: 60px;
+        padding: 0.8rem;
+    }
+
 }
