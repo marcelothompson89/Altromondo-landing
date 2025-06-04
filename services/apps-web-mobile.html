@@ -15,22 +15,22 @@
                 <img src="../images/logo-altromondo.png" alt="Altromondo">
             </a>
             <ul class="nav-menu">
-                <li><a href="../index.html#inicio">Inicio</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
+                <li><a href="../index.html#inicio" data-translate="nav-home">Inicio</a></li>
+                <li><a href="../index.html#nosotros" data-translate="nav-about">Nosotros</a></li>
                 <li class="dropdown">
-                    <a href="../index.html#servicios" class="dropbtn active">
+                    <a href="../index.html#servicios" class="dropbtn active" data-translate="nav-services">
                         Servicios <span class="dropdown-arrow">▼</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="sap-btp.html">SAP Business Technology Platform</a>
-                        <a href="consultoria-sap.html">Consultoría SAP</a>
-                        <a href="apps-web-mobile.html" class="current-page">Apps Web & Mobile</a>
-                        <a href="automatizacion-ia.html">Automatización e IA</a>
-                        <a href="staffing.html">Staffing Especializado</a>
+                        <a href="sap-btp.html" data-translate="service-2-title">SAP Business Technology Platform</a>
+                        <a href="consultoria-sap.html" data-translate="dropdown-sap-consulting">Consultoría SAP</a>
+                        <a href="apps-web-mobile.html" class="current-page" data-translate="dropdown-apps">Apps Web & Mobile</a>
+                        <a href="automatizacion-ia.html" data-translate="dropdown-ai">Automatización e IA</a>
+                        <a href="staffing.html" data-translate="dropdown-staffing">Staffing Especializado</a>
                     </div>
                 </li>
-                <li><a href="../index.html#casos">Casos</a></li>
-                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="../index.html#casos" data-translate="nav-cases">Casos</a></li>
+                <li><a href="../index.html#contacto" data-translate="nav-contact">Contacto</a></li>
             </ul>
             <div class="language-switcher">
                 <button class="lang-btn active" onclick="switchLanguage('es')">ES</button>
@@ -42,11 +42,11 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="../index.html">Inicio</a> 
-            <span class="separator">›</span> 
-            <a href="../index.html#servicios">Servicios</a>
+            <a href="../index.html" data-translate="nav-home">Inicio</a>
             <span class="separator">›</span>
-            <span class="current">Apps Web & Mobile</span>
+            <a href="../index.html#servicios" data-translate="nav-services">Servicios</a>
+            <span class="separator">›</span>
+            <span class="current" data-translate="service-apps-title">Apps Web & Mobile</span>
         </div>
     </div>
 
@@ -64,20 +64,20 @@
         </div>
         <div class="container">
             <div class="service-hero-content">
-                <h1>Apps Web & Mobile</h1>
-                <p class="service-subtitle">Desarrollamos aplicaciones web y móviles modernas integradas con SAP, con UX/UI excepcional y rendimiento optimizado</p>
+                <h1 data-translate="apps-hero-title">Apps Web & Mobile</h1>
+                <p class="service-subtitle" data-translate="apps-hero-subtitle">Desarrollamos aplicaciones web y móviles modernas integradas con SAP, con UX/UI excepcional y rendimiento optimizado</p>
                 <div class="service-stats">
                     <div class="stat">
                         <span class="stat-number">80+</span>
-                        <span class="stat-label">Apps desarrolladas</span>
+                        <span class="stat-label" data-translate="apps-stat-apps">Apps desarrolladas</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">4.8/5</span>
-                        <span class="stat-label">Rating de usuario</span>
+                        <span class="stat-label" data-translate="apps-stat-rating">Rating de usuario</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">50%</span>
-                        <span class="stat-label">Más engagement</span>
+                        <span class="stat-label" data-translate="apps-stat-engagement">Más engagement</span>
                     </div>
                 </div>
             </div>
@@ -89,12 +89,12 @@
         <div class="container">
             <div class="content-grid">
                 <div class="content-text">
-                    <h2>Aplicaciones que Transforman Experiencias</h2>
-                    <p>Creamos aplicaciones web y móviles que conectan perfectamente con tu ecosistema SAP, priorizando la experiencia del usuario y la eficiencia operativa.</p>
-                    <p>Nuestras soluciones combinan tecnologías modernas con integración robusta, asegurando que tus usuarios tengan acceso a la información crítica en cualquier momento y lugar.</p>
+                    <h2 data-translate="apps-what-title">Aplicaciones que Transforman Experiencias</h2>
+                    <p data-translate="apps-what-text1">Creamos aplicaciones web y móviles que conectan perfectamente con tu ecosistema SAP, priorizando la experiencia del usuario y la eficiencia operativa.</p>
+                    <p data-translate="apps-what-text2">Nuestras soluciones combinan tecnologías modernas con integración robusta, asegurando que tus usuarios tengan acceso a la información crítica en cualquier momento y lugar.</p>
                     <div class="highlight-box">
-                        <h4>📱 Mobile-First Approach</h4>
-                        <p>Diseñamos pensando primero en dispositivos móviles, garantizando experiencias óptimas en smartphones, tablets y desktop.</p>
+                        <h4 data-translate="apps-mobile-first-title">📱 Mobile-First Approach</h4>
+                        <p data-translate="apps-mobile-first-text">Diseñamos pensando primero en dispositivos móviles, garantizando experiencias óptimas en smartphones, tablets y desktop.</p>
                     </div>
                 </div>
                 <div class="content-visual">
@@ -135,8 +135,8 @@
     <!-- Our Services -->
     <section class="section services-detail">
         <div class="container">
-            <h2 class="section-title">Nuestros Servicios de Desarrollo</h2>
-            <p class="section-subtitle">Desde la conceptualización hasta el deployment y mantenimiento</p>
+            <h2 class="section-title" data-translate="apps-services-title">Nuestros Servicios de Desarrollo</h2>
+            <p class="section-subtitle" data-translate="apps-services-subtitle">Desde la conceptualización hasta el deployment y mantenimiento</p>
             
             <div class="services-detail-grid">
                 <div class="service-detail-card">
@@ -420,11 +420,11 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Tienes una idea de app increíble?</h2>
-                <p>Transformemos tu concepto en una aplicación que tus usuarios amarán usar</p>
+                <h2 data-translate="apps-cta-title">¿Tienes una idea de app increíble?</h2>
+                <p data-translate="apps-cta-text">Transformemos tu concepto en una aplicación que tus usuarios amarán usar</p>
                 <div class="cta-buttons">
-                    <a href="../index.html#contacto" class="cta-button primary">Crear mi App</a>
-                    <a href="mailto:info@altromondo.com.ar" class="cta-button secondary">Discutir Proyecto</a>
+                    <a href="../index.html#contacto" class="cta-button primary" data-translate="apps-cta-primary">Crear mi App</a>
+                    <a href="mailto:info@altromondo.com.ar" class="cta-button secondary" data-translate="apps-cta-secondary">Discutir Proyecto</a>
                 </div>
             </div>
         </div>
@@ -436,8 +436,8 @@
             <div class="footer-logo">
                 <img src="../images/logo-altromondo.png" alt="Altromondo">
             </div>
-            <div class="footer-tagline">Transformando negocios con tecnología SAP</div>
-            <p>&copy; 2025 Altromondo. Todos los derechos reservados.</p>
+            <div class="footer-tagline" data-translate="footer-tagline">Transformando negocios con tecnología SAP</div>
+            <p data-translate="footer-copyright">&copy; 2025 Altromondo. Todos los derechos reservados.</p>
         </div>
     </footer>
 
