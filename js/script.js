@@ -495,16 +495,25 @@ function switchLanguage(lang) {
     });
     document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
 
-    // Update text content
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
-        }
-    });
+    // Add fade effect to prevent text overlap
+    document.body.style.opacity = '0.7';
+    document.body.style.transition = 'opacity 0.2s ease';
 
-    // Store preference
-    localStorage.setItem('preferred-language', lang);
+    // Update text content with slight delay
+    setTimeout(() => {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[lang] && translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+        
+        // Restore opacity
+        document.body.style.opacity = '1';
+        
+        // Store preference
+        localStorage.setItem('preferred-language', lang);
+    }, 100);
 }
 
 // Smooth scrolling for navigation links
@@ -759,10 +768,25 @@ const preloadImages = () => {
 
 preloadImages();
 
-// Initialize language on page load
-window.addEventListener('load', function() {
+// Initialize language on page load - VERSIÓN CORREGIDA
+document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferred-language') || 'es';
-    if (savedLang !== 'es') {
-        switchLanguage(savedLang);
+    
+    // Primero aplicar las traducciones
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[savedLang] && translations[savedLang][key]) {
+            element.innerHTML = translations[savedLang][key];
+        }
+    });
+    
+    // Luego activar el botón correcto
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    const activeBtn = document.querySelector(`[onclick="switchLanguage('${savedLang}')"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
     }
 });
