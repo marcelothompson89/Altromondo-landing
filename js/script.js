@@ -1335,27 +1335,46 @@ document.querySelectorAll('.animate-on-scroll').forEach((el) => {
     observer.observe(el);
 });
 
-// Form submission
+// Form submission con EmailJS
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    const nombre = formData.get('nombre');
-    const empresa = formData.get('empresa');
-    const email = formData.get('email');
-    const mensaje = formData.get('mensaje');
+    // Mostrar estado de carga
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
     
-    // Simple validation
-    if (nombre && empresa && email && mensaje) {
-        // Show success message
-        alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo en las próximas 24 horas.');
-        
-        // Reset form
-        this.reset();
-    } else {
-        alert('Por favor, completa todos los campos del formulario.');
-    }
+    // ⚡ CONFIGURACIÓN EMAILJS
+    emailjs.init("mf4zuG-2qGAeXLKxX"); 
+    
+    const templateParams = {
+        from_name: this.nombre.value,
+        from_company: this.empresa.value,
+        from_email: this.email.value,
+        message: this.mensaje.value,
+        to_email: 'info@altromondo.com.ar' // Email donde quieres recibir los mensajes
+    };
+    
+    // Enviar email con EmailJS
+    emailjs.send('service_y267qza', 'template_nglu2ik', templateParams)
+        .then(function() {
+            // Éxito
+            alert('¡Mensaje enviado exitosamente! 🎉\nNos contactaremos contigo en las próximas 24 horas.');
+            document.querySelector('.contact-form').reset();
+        })
+        .catch(function(error) {
+            // Error
+            console.error('Error enviando email:', error);
+            alert('❌ Hubo un error al enviar el mensaje.\nPor favor intenta nuevamente o escríbenos directamente a info@altromondo.com.ar');
+        })
+        .finally(function() {
+            // Restaurar botón siempre
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        });
 });
 
 // Add floating animation to hero elements
