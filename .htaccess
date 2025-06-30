@@ -1,0 +1,15 @@
+# Habilitar rewrite engine
+RewriteEngine On
+
+# Remover la extensión .html de las URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirigir URLs con .html a URLs sin extensión
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Opcional: Forzar barra final (/) para directorios
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html [L]
