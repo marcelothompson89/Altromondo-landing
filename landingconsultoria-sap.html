@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKDTBXL7');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría SAP - Altromondo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/service-page.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKDTBXL7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Header with Logo and Language Switcher -->
+    <header class="header" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <nav class="nav-container" style="justify-content: space-between;">
+            <a href="index.html" class="logo">
+                <img src="images/logo-altromondo.png" alt="Altromondo">
+            </a>
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('es')">ES</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Integrated Form -->
+    <section class="service-hero">
+        <div class="service-hero-bg">
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+            <div class="tech-particle"></div>
+        </div>
+        <div class="container">
+            <div class="content-grid" style="align-items: flex-start; gap: 3rem;">
+                <!-- Hero Content Left -->
+                <div class="service-hero-content" style="text-align: left;">
+                    <h1 data-translate="consulting-hero-title">Consultoría SAP</h1>
+                    <p class="service-subtitle" data-translate="consulting-hero-subtitle">Optimizamos tus procesos de negocio con consultoría funcional y técnica especializada en el ecosistema SAP</p>
+                    <div class="service-stats" style="justify-content: flex-start; margin-top: 2rem;">
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label" data-translate="consulting-stat-projects">Proyectos SAP</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-translate="consulting-stat-experience">Años de experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label" data-translate="consulting-stat-efficiency">Mejora en eficiencia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Right -->
+                <div class="hero-form-container">
+                    <div class="contact-form" style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px);">
+                        <h3 style="color: #121272; margin-bottom: 1rem; text-align: center;" data-translate="hero-form-title-sap">Solicita tu consultoría SAP</h3>
+                        <p style="color: #111144; margin-bottom: 1.5rem; text-align: center; font-size: 0.9rem;" data-translate="hero-form-subtitle-sap">Completa el formulario y te contactaremos en 24 horas</p>
+                        
+                        <form class="hero-contact-form">
+                            <div class="form-group">
+                                <label for="nombre-hero" style="color: #121272; font-weight: 500;" data-translate="form-name">Nombre completo</label>
+                                <input type="text" id="nombre-hero" name="nombre" required style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.8rem; width: 100%; background: white;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="empresa-hero" style="color: #121272; font-weight: 500;" data-translate="form-company">Empresa</label>
+                                <input type="text" id="empresa-hero" name="empresa" required style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.8rem; width: 100%; background: white;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email-hero" style="color: #121272; font-weight: 500;" data-translate="form-email">Email</label>
+                                <input type="email" id="email-hero" name="email" required style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.8rem; width: 100%; background: white;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje-hero" style="color: #121272; font-weight: 500;" data-translate="form-message-sap">Contanos sobre tu proyecto SAP</label>
+                                <textarea id="mensaje-hero" name="mensaje" data-translate-placeholder="form-placeholder-sap" placeholder="Descripción del módulo SAP, objetivos, timeline estimado..." required style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.8rem; width: 100%; background: white; height: 100px; resize: vertical;"></textarea>
+                            </div>
+                            
+                            <button type="submit" style="background: #00e7e7; color: #111144; padding: 1rem 2rem; border: none; border-radius: 50px; cursor: pointer; font-weight: 600; width: 100%; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 231, 231, 0.3);" data-translate="form-submit">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is SAP Consulting -->
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2 data-translate="consulting-what-title">Consultoría SAP Integral</h2>
+                    <p data-translate="consulting-what-text1">Nuestra consultoría SAP combina experiencia técnica profunda con sólido conocimiento funcional para optimizar tus procesos de negocio y maximizar el retorno de inversión en tecnología SAP.</p>
+                    <p data-translate="consulting-what-text2">Trabajamos contigo desde la estrategia inicial hasta la implementación completa, asegurando que tu solución SAP se alinee perfectamente con tus objetivos de negocio.</p>
+                    <div class="highlight-box">
+                        <h4 data-translate="consulting-highlight-title">🎯 Enfoque en Resultados</h4>
+                        <p data-translate="consulting-highlight-text">No solo implementamos tecnología, sino que transformamos procesos para generar valor real y mensurable en tu organización.</p>
+                    </div>
+                </div>
+                <div class="content-visual">
+                    <div class="tech-diagram">
+                        <div class="tech-layer">
+                            <h5 data-translate="consulting-layer-strategy">Estrategia y Planificación</h5>
+                            <div class="tech-components">
+                                <span>Assessment</span>
+                                <span>Roadmap</span>
+                                <span>ROI Analysis</span>
+                            </div>
+                        </div>
+                        <div class="tech-layer">
+                            <h5 data-translate="consulting-layer-functional">Consultoría Funcional</h5>
+                            <div class="tech-components">
+                                <span>Process Design</span>
+                                <span>Best Practices</span>
+                                <span>Change Management</span>
+                            </div>
+                        </div>
+                        <div class="tech-layer">
+                            <h5 data-translate="consulting-layer-technical">Implementación Técnica</h5>
+                            <div class="tech-components">
+                                <span>Configuration</span>
+                                <span>Customization</span>
+                                <span>Integration</span>
+                            </div>
+                        </div>
+                        <div class="tech-layer foundation">
+                            <h5 data-translate="consulting-layer-support">Soporte Continuo</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our SAP Services -->
+    <section class="section services-detail">
+        <div class="container">
+            <h2 class="section-title" data-translate="consulting-services-title">Áreas de Especialización</h2>
+            <p class="section-subtitle" data-translate="consulting-services-subtitle">Consultoría experta en todos los módulos y aspectos de SAP</p>
+            
+            <div class="services-detail-grid">
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">💼</div>
+                    <h3 data-translate="consulting-service1-title">SAP S/4 HANA</h3>
+                    <ul>
+                        <li data-translate="consulting-service1-li1">Migración desde SAP ECC</li>
+                        <li data-translate="consulting-service1-li2">Implementación greenfield</li>
+                        <li data-translate="consulting-service1-li3">Optimización de procesos</li>
+                        <li data-translate="consulting-service1-li4">Nuevas funcionalidades Fiori</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">📊</div>
+                    <h3 data-translate="consulting-service2-title">Módulos Funcionales</h3>
+                    <ul>
+                        <li data-translate="consulting-service2-li1">FI/CO - Finanzas y Controlling</li>
+                        <li data-translate="consulting-service2-li2">MM - Gestión de Materiales</li>
+                        <li data-translate="consulting-service2-li3">SD - Ventas y Distribución</li>
+                        <li data-translate="consulting-service2-li4">PP - Planificación de Producción</li>
+                        <li data-translate="consulting-service2-li5">HR/HCM - Recursos Humanos</li>
+                        <li data-translate="consulting-service2-li6">PM - Mantenimiento de Planta</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">🔧</div>
+                    <h3 data-translate="consulting-service3-title">Consultoría Técnica</h3>
+                    <ul>
+                        <li data-translate="consulting-service3-li1">Desarrollo ABAP/ABAP Objects</li>
+                        <li data-translate="consulting-service3-li2">Interfaces y conversiones</li>
+                        <li data-translate="consulting-service3-li3">Formularios y reportes</li>
+                        <li data-translate="consulting-service3-li4">Workflows y procesos</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">🏗️</div>
+                    <h3 data-translate="consulting-service4-title">Arquitectura SAP</h3>
+                    <ul>
+                        <li data-translate="consulting-service4-li1">Diseño de landscape</li>
+                        <li data-translate="consulting-service4-li2">Estrategia de integración</li>
+                        <li data-translate="consulting-service4-li3">SAP Basis</li>
+                        <li data-translate="consulting-service4-li4">Seguridad y autorizaciones</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">📈</div>
+                    <h3 data-translate="consulting-service5-title">Optimización y Mejora</h3>
+                    <ul>
+                        <li data-translate="consulting-service5-li1">Health checks del sistema</li>
+                        <li data-translate="consulting-service5-li2">Análisis de performance</li>
+                        <li data-translate="consulting-service5-li3">Simplificación de procesos</li>
+                        <li data-translate="consulting-service5-li4">Actualización de versiones</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">🎓</div>
+                    <h3 data-translate="consulting-service6-title">Capacitación y Adopción</h3>
+                    <ul>
+                        <li data-translate="consulting-service6-li1">Training funcional y técnico</li>
+                        <li data-translate="consulting-service6-li2">Desarrollo de competencias</li>
+                        <li data-translate="consulting-service6-li3">Documentación de procesos</li>
+                        <li data-translate="consulting-service6-li4">Change management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodologies -->
+    <section class="section tech-stack">
+        <div class="container">
+            <h2 class="section-title" data-translate="consulting-methods-title">Metodologías y Herramientas</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🔄</div>
+                    <h4 data-translate="consulting-method1-title">SAP Activate</h4>
+                    <p data-translate="consulting-method1-desc">Metodología oficial SAP para implementaciones ágiles</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⚡</div>
+                    <h4 data-translate="consulting-method2-title">Agile/Scrum</h4>
+                    <p data-translate="consulting-method2-desc">Entregas iterativas con feedback continuo</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📋</div>
+                    <h4 data-translate="consulting-method3-title">Solution Manager</h4>
+                    <p data-translate="consulting-method3-desc">Gestión del ciclo de vida de aplicaciones SAP</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔍</div>
+                    <h4 data-translate="consulting-method4-title">SAP ReadyNess Check</h4>
+                    <p data-translate="consulting-method4-desc">Evaluación de preparación para S/4 HANA</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🛠️</div>
+                    <h4 data-translate="consulting-method5-title">SAP Best Practices</h4>
+                    <p data-translate="consulting-method5-desc">Procesos pre-configurados estándar</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <h4 data-translate="consulting-method6-title">SAP Value Engineering</h4>
+                    <p data-translate="consulting-method6-desc">Maximización del valor de negocio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section use-cases">
+        <div class="container">
+            <h2 class="section-title" data-translate="consulting-industries-title">Experiencia por Industria</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-header">
+                        <div class="use-case-icon">🏭</div>
+                        <h3 data-translate="consulting-industry1-title">Manufactura</h3>
+                    </div>
+                    <div class="use-case-content">
+                        <p data-translate="consulting-industry1-spec"><strong>Especialización:</strong> Optimización de procesos productivos y supply chain</p>
+                        <p data-translate="consulting-industry1-modules"><strong>Módulos clave:</strong> PP, MM, QM, PM con integración MES/IoT</p>
+                        <div class="benefits">
+                            <span class="benefit" data-translate="consulting-industry1-benefit1">Reducción de waste</span>
+                            <span class="benefit" data-translate="consulting-industry1-benefit2">Mejora en OEE</span>
+                            <span class="benefit" data-translate="consulting-industry1-benefit3">Trazabilidad completa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-header">
+                        <div class="use-case-icon">🏢</div>
+                        <h3 data-translate="consulting-industry2-title">Servicios Financieros</h3>
+                    </div>
+                    <div class="use-case-content">
+                        <p data-translate="consulting-industry2-spec"><strong>Especialización:</strong> Gestión financiera y cumplimiento regulatorio</p>
+                        <p data-translate="consulting-industry2-modules"><strong>Módulos clave:</strong> FI/CO, TR, RM con reportes regulatorios</p>
+                        <div class="benefits">
+                            <span class="benefit" data-translate="consulting-industry2-benefit1">Compliance automático</span>
+                            <span class="benefit" data-translate="consulting-industry2-benefit2">Real-time reporting</span>
+                            <span class="benefit" data-translate="consulting-industry2-benefit3">Gestión de riesgo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-header">
+                        <div class="use-case-icon">🛒</div>
+                        <h3 data-translate="consulting-industry3-title">Retail y Distribución</h3>
+                    </div>
+                    <div class="use-case-content">
+                        <p data-translate="consulting-industry3-spec"><strong>Especialización:</strong> Gestión omnicanal y experiencia del cliente</p>
+                        <p data-translate="consulting-industry3-modules"><strong>Módulos clave:</strong> SD, MM, WM con integración eCommerce</p>
+                        <div class="benefits">
+                            <span class="benefit" data-translate="consulting-industry3-benefit1">Omnicanalidad</span>
+                            <span class="benefit" data-translate="consulting-industry3-benefit2">Inventory optimization</span>
+                            <span class="benefit" data-translate="consulting-industry3-benefit3">Customer insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-header">
+                        <div class="use-case-icon">⚡</div>
+                        <h3 data-translate="consulting-industry4-title">Energía y Utilities</h3>
+                    </div>
+                    <div class="use-case-content">
+                        <p data-translate="consulting-industry4-spec"><strong>Especialización:</strong> Gestión de activos y operaciones críticas</p>
+                        <p data-translate="consulting-industry4-modules"><strong>Módulos clave:</strong> PM, PS, IS-U con IoT integration</p>
+                        <div class="benefits">
+                            <span class="benefit" data-translate="consulting-industry4-benefit1">Asset management</span>
+                            <span class="benefit" data-translate="consulting-industry4-benefit2">Predictive maintenance</span>
+                            <span class="benefit" data-translate="consulting-industry4-benefit3">Regulatory compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;" data-translate="contact-title">Hablemos de tu proyecto</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);" data-translate="contact-subtitle">Te ayudamos a construir soluciones que funcionan, hoy y mañana.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h3 data-translate="contact-heading">¡Empecemos juntos!</h3>
+                    <p data-translate="contact-description">Cada gran proyecto comienza con una conversación. Contanos sobre tu desafío y diseñemos juntos la solución perfecta.</p>
+                    <br>
+                    <p data-translate="contact-email"><strong>📧 Email:</strong> info@altromondo.com.ar</p>
+                    <p data-translate="contact-phone"><strong>📞 Teléfono:</strong> +54 (11) 6463 5474</p>
+                    <p data-translate="contact-location"><strong>📍 Ubicación:</strong> Correa 3030, 3B, CABA. Argentina.</p>
+                    <br>
+                    
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <h4 data-translate="social-title">Síguenos en:</h4>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/company/altromondo-sa" target="_blank" rel="noopener" class="social-link linkedin">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/altromondo.arg/" target="_blank" rel="noopener" class="social-link instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificaciones y membresías -->
+                    <div class="certifications">
+                        <div class="cert-item">
+                            <img src="images/cessi-logo.png" alt="CESSI - Cámara de la Industria Argentina del Software" class="cert-logo">
+                            <p class="cert-description" data-translate="cessi-desc">Miembro de CESSI - Cámara de la Industria Argentina del Software</p>
+                        </div>
+                        <div class="cert-item">
+                            <img src="images/sap-partner-edge.png" alt="SAP PartnerEdge" class="cert-logo">
+                            <p class="cert-description" data-translate="sap-partner-desc">SAP Partner certificado con acceso a las últimas tecnologías y recursos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form animate-on-scroll">
+                    <div class="form-group">
+                        <label for="nombre" data-translate="form-name">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa" data-translate="form-company">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-translate="form-email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje" data-translate="form-message">Contanos sobre tu proyecto</label>
+                        <textarea id="mensaje" name="mensaje" data-translate-placeholder="form-placeholder" placeholder="Descripción del desafío, objetivos, timeline estimado..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" data-translate="form-submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/logo-altromondo.png" alt="Altromondo">
+            </div>
+            <div class="footer-tagline" data-translate="footer-tagline">Transformando negocios con tecnología SAP</div>
+            <p data-translate="footer-copyright">&copy; 2025 Altromondo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/service-page.js"></script>
+    
+    <!-- Additional translations for SAP consulting hero form -->
+    <script>
+        // Add SAP consulting hero form translations to existing translations object
+        if (typeof translations !== 'undefined') {
+            // Spanish translations
+            translations.es['hero-form-title-sap'] = 'Solicita tu consultoría SAP';
+            translations.es['hero-form-subtitle-sap'] = 'Completa el formulario y te contactaremos en 24 horas';
+            translations.es['form-message-sap'] = 'Contanos sobre tu proyecto SAP';
+            translations.es['form-placeholder-sap'] = 'Descripción del módulo SAP, objetivos, timeline estimado...';
+            
+            // English translations
+            translations.en['hero-form-title-sap'] = 'Request your SAP consultation';
+            translations.en['hero-form-subtitle-sap'] = 'Complete the form and we will contact you within 24 hours';
+            translations.en['form-message-sap'] = 'Tell us about your SAP project';
+            translations.en['form-placeholder-sap'] = 'SAP module description, objectives, estimated timeline...';
+        }
+    </script>
+    
+    <!-- Custom script for dual form handling -->
+    <script>
+        // Handle hero form
+        document.querySelector('.hero-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            
+            // EmailJS configuration
+            emailjs.init("mf4zuG-2qGAeXLKxX"); 
+            
+            const templateParams = {
+                from_name: this.nombre.value,
+                from_company: this.empresa.value,
+                from_email: this.email.value,
+                message: this.mensaje.value,
+                page_source: 'Landing SAP Consulting - Hero Form',
+                to_email: 'info@altromondo.com.ar'
+            };
+            
+            // Send email
+            emailjs.send('service_y267qza', 'template_nglu2ik', templateParams)
+                .then(function() {
+                    alert('¡Mensaje enviado exitosamente! 🎉\nNos contactaremos contigo en las próximas 24 horas.');
+                    document.querySelector('.hero-contact-form').reset();
+                })
+                .catch(function(error) {
+                    console.error('Error enviando email:', error);
+                    alert('❌ Hubo un error al enviar el mensaje.\nPor favor intenta nuevamente o escríbenos directamente a info@altromondo.com.ar');
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                });
+        });
+        
+        // Handle bottom contact form (same as index.html)
+        document.querySelector('#contacto .contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            
+            // EmailJS configuration
+            emailjs.init("mf4zuG-2qGAeXLKxX"); 
+            
+            const templateParams = {
+                from_name: this.nombre.value,
+                from_company: this.empresa.value,
+                from_email: this.email.value,
+                message: this.mensaje.value,
+                page_source: 'Landing SAP Consulting - Contact Form',
+                to_email: 'info@altromondo.com.ar'
+            };
+            
+            // Send email
+            emailjs.send('service_y267qza', 'template_nglu2ik', templateParams)
+                .then(function() {
+                    alert('¡Mensaje enviado exitosamente! 🎉\nNos contactaremos contigo en las próximas 24 horas.');
+                    document.querySelector('#contacto .contact-form').reset();
+                })
+                .catch(function(error) {
+                    console.error('Error enviando email:', error);
+                    alert('❌ Hubo un error al enviar el mensaje.\nPor favor intenta nuevamente o escríbenos directamente a info@altromondo.com.ar');
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                });
+        });
+        
+        // Add hover effect to hero form button
+        document.querySelector('.hero-contact-form button[type="submit"]').addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 8px 25px rgba(0, 231, 231, 0.4)';
+        });
+        
+        document.querySelector('.hero-contact-form button[type="submit"]').addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 231, 231, 0.3)';
+        });
+    </script>
+</body>
+</html>
