@@ -44,7 +44,7 @@ body {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -533,8 +533,8 @@ body {
 }
 
 .about-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
     
 }
@@ -928,7 +928,7 @@ body {
 }
 
 .footer-logo img {
-    max-height: 50px;
+    max-height: 80px;
     filter: brightness(0) invert(1);
 }
 
